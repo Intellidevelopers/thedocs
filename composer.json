@@ -1,0 +1,32 @@
+{
+    "name": "josiah/thedocs",
+    "description": "A CLI tool to interact with TheDocs Rest API",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adeagbo Josiah",
+            "email": "adeagbojosiah1@gmail.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JohnDoe\\MyPackage\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "echo 'Package successfully installed!'"
+        ]
+    },
+    "keywords": [
+        "example",
+        "package",
+        "php"
+    ]
+}
