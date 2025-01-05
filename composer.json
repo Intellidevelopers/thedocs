@@ -1,5 +1,5 @@
 {
-    "name": "josiah/thedocs",
+    "name": "abefe/thedocs",
     "description": "A CLI tool to interact with TheDocs Rest API",
     "version": "1.0.0",
     "license": "MIT",
