@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="API Documentation">
+    <meta name="keywords" content="API, Documentation">
+
+    <title>API Documentation - Endpoints</title>
+
+    <!-- Styles -->
+    <link href="assets/css/page.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-stick-dark">
+        <div class="container">
+            <div class="navbar-left">
+                <button class="navbar-toggler" type="button">&#9776;</button>
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-dark" src="assets/img/logo-dark.png" alt="logo">
+                    <img class="logo-light" src="assets/img/logo-light.png" alt="logo">
+                </a>
+            </div>
+
+            <section class="navbar-mobile">
+                <span class="navbar-divider d-mobile-none"></span>
+                <ul class="nav nav-navbar">
+                    <li class="nav-item"><a class="nav-link" href="#">API Docs <span class="arrow"></span></a>
+                        <nav class="nav">
+                            <a class="nav-link" href="introduction.html">Introduction</a>
+                            <a class="nav-link" href="endpoints.html">Endpoints</a>
+                        </nav>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header text-white bg-dark pt-9 pb-5" style="background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);">
+        <div class="container">
+            <h3>API Documentation</h3>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="row">
+
+                <!-- Sidebar -->
+                <div class="col-md-4 col-xl-3 order-last order-md-first">
+                    <hr class="d-md-none">
+                    <aside class="sidebar sidebar-sticky sidebar-stick-shadow pr-md-5 br-1">
+                        <ul class="nav nav-sidebar nav-sidebar-hero" data-accordion="true">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">API Overview <i class="nav-angle"></i></a>
+                                <div class="nav">
+                                    <a class="nav-link" href="introduction.html">Introduction</a>
+                                    <a class="nav-link active" href="endpoints.html">API Endpoints</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+                <!-- Content Section -->
+                <div class="col-md-8 col-xl-9">
+                    <section>
+                        <h4>API Endpoints</h4>
+                        <p>Welcome to theDocs API documentation! Below you will find information on how to interact with our API, including authentication, available endpoints, possible responses, and error codes.</p>
+                    </section>
+
+                    <!-- Getting Started -->
+                    <section>
+                        <h5>Getting Started</h5>
+                        <p>To get started, you Don't need to authenticate by obtaining an API key. The key will be included in the headers of your requests.</p>
+                    </section>
+
+                    <!-- Authentication -->
+                    <section>
+                        <h5>Authentication</h5>
+                        <p>To access the API, you dont need authentication or API Key to use our API endpoints. You can start using our API by visiting our documentation. All API requests require the following base_url:</p>
+                        <pre><code>BASE_URL: https://thedocs.loma.com.ng/api.php/</code></pre>
+                    </section>
+
+                    <!-- Endpoints -->
+                    <section>
+                        <h5>Endpoints</h5>
+                        <ul>
+                            <li><a href="endpoints.html#users">/random-users - Get list of users</a></li>
+                            <li><a href="endpoints.html#posts">/random-posts - Get posts</a></li>
+                            <li><a href="endpoints.html#comments">/random-images - Get images</a></li>
+                        </ul>
+                    </section>
+
+                    <!-- Responses -->
+                    <section>
+                        <h5>Responses</h5>
+                        <p>API responses are returned in JSON format. Here's an example of a successful response:</p>
+                        <pre><code>{
+    "status": "success",
+    "data": {
+        "id": 1,
+        "name": "John Doe"
+    }
+}</code></pre>
+                        
+                        <h6>Users Response:</h6>
+                        <pre><code>{
+    "status": "success",
+    "data": [
+        {
+            "id": "1",
+            "name": "John Doe",
+            "email": "john.doe@example.com",
+            "created_at": "2025-01-05 21:54:20"
+        }
+    ],
+    "message": null
+}</code></pre>
+                    
+                        <h6>Posts Response:</h6>
+                        <pre><code>{
+    "status": "success",
+    "data": [
+        {
+            "id": "1",
+            "title": "A Sample Post",
+            "body": "This is the content of the sample post.",
+            "created_at": "2025-01-05 21:55:57"
+        }
+    ],
+    "message": null
+}</code></pre>
+                    
+                        <h6>Images Response:</h6>
+                        <pre><code>{
+    "status": "success",
+    "data": [
+        {
+            "id": "1",
+            "url": "http://example.com/image1.jpg",
+            "description": "A beautiful sunset"
+        }
+    ],
+    "message": null
+}</code></pre>
+                    
+                        <h6>Invalid Endpoint Response:</h6>
+                        <pre><code>{
+    "status": "error",
+    "data": null,
+    "message": "Invalid endpoint"
+}</code></pre>
+                    </section>
+                    
+
+                    <!-- Error Codes -->
+                    <section>
+                        <h5>Error Codes</h5>
+                        <ul>
+                            <li><code>400</code> - Bad Request</li>
+                            <li><code>401</code> - Unauthorized</li>
+                            <li><code>404</code> - Not Found</li>
+                            <li><code>500</code> - Internal Server Error</li>
+                        </ul>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white">
+        <div class="container">
+            <p>&copy; 2025 TheDocs API. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

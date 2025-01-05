@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from thetheme.io/thedocs/help/faq-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jan 2025 22:42:15 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>TheDocs — Frequently asked questions</title>
+
+    <!-- Styles -->
+    <link href="assets/css/page.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
+
+  <body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-stick-dark" data-navbar="smart">
+      <div class="container">
+
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="index.html">
+            <img class="logo-dark" src="assets/img/logo-dark.png" alt="logo">
+            <img class="logo-light" src="assets/img/logo-light.png" alt="logo">
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <span class="navbar-divider d-mobile-none"></span>
+
+          <ul class="nav nav-navbar">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help Center</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Docs <span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="introduction.html">Getting started</a>
+                <a class="nav-link" href="endpoints.html">API Endpoints</a>
+              </nav>
+            </li>
+          </ul>
+        </section>
+
+        <a class="btn btn-sm btn-round btn-success" href="introduction.html">Get Started</a>
+
+      </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+    <header class="header" style="background-color: #f1f6fa">
+      <div class="container-sm">
+        <h1>Frequently asked questions</h1>
+        <p class="lead">If you have a question and couldn't find it here, just send us an email using <a href="mailto:speedafhost@gmail.com">contact form</a>.</p>
+      </div>
+    </header><!-- /.header -->
+
+
+<!-- Main Content -->
+<main class="main-content">
+  <section class="section">
+    <div class="container-sm">
+
+      <ol class="toc bg-light b-1 px-5 py-3" data-caption="List of questions">
+        <li><a href="#how-to-call-api">How can I call the API?</a></li>
+        <li><a href="#authentication">How do I authenticate with the API?</a></li>
+        <li><a href="#supported-methods">What HTTP methods are supported by the API?</a></li>
+        <li><a href="#response-format">What is the response format?</a></li>
+        <li><a href="#error-handling">How does the API handle errors?</a></li>
+        <li><a href="#rate-limit">Is there a rate limit for API requests?</a></li>
+      </ol>
+
+      <h5 id="how-to-call-api">How can I call the API?</h5>
+      <p>To call the API, use the provided endpoints and make HTTP requests using methods like GET, POST, PUT, or DELETE. The base URL for all API requests is <code>https://thedocs.loma.com.ng/api.php/</code>.</p>
+
+      <hr class="hr-dash">
+
+      <h5 id="authentication">How do I authenticate with the API?</h5>
+      <p>The API uses token-based authentication. After successful login, you will receive a JWT (JSON Web Token). Include this token in the Authorization header of your API requests:</p>
+      <pre><code>BASE_URL: https://thedocs.loma.com.ng/</code></pre>
+
+      <hr class="hr-dash">
+
+      <h5 id="supported-methods">What HTTP methods are supported by the API?</h5>
+      <p>The API supports the following HTTP methods:</p>
+      <ul>
+        <li><strong>GET</strong> - Retrieve data (e.g., fetching posts, users, images)</li>
+        <li><strong>POST</strong> - Create new records (e.g., creating a new post or user)</li>
+        <li><strong>PUT</strong> - Update existing records (e.g., updating a user's information)</li>
+        <li><strong>DELETE</strong> - Delete records (e.g., removing a post or user)</li>
+      </ul>
+
+      <hr class="hr-dash">
+
+      <h5 id="response-format">What is the response format?</h5>
+      <p>The API responds in JSON format. Here is an example of a successful response:</p>
+      <pre><code>{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "name": "John Doe"
+  }
+}</code></pre>
+      <p>In case of an error, the response will look like this:</p>
+      <pre><code>{
+  "status": "error",
+  "message": "Invalid endpoint"
+}</code></pre>
+
+      <hr class="hr-dash">
+
+      <h5 id="error-handling">How does the API handle errors?</h5>
+      <p>The API uses standard HTTP status codes to indicate the success or failure of an API request. In addition, the API provides a JSON response with an error message explaining the issue.</p>
+      <pre><code>{
+  "status": "error",
+  "message": "Invalid API key"
+}</code></pre>
+
+      <hr class="hr-dash">
+
+      <h5 id="rate-limit">Is there a rate limit for API requests?</h5>
+      <p>Yes, the API has a rate limit to prevent abuse. By default, you can make up to 1000 requests per hour. If you exceed the rate limit, you will receive a 429 status code indicating too many requests.</p>
+
+    </div>
+  </section>
+</main><!-- /.main-content -->
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row gap-y align-items-center">
+
+          <div class="col-md-9">
+            <div class="nav justify-content-center justify-content-md-start">
+              <a class="nav-link" href="../index.html">Home</a>
+              <a class="nav-link" href="../introduction.html">Docs</a>
+              <a class="nav-link" href="../page/changelog-1.html">Changelog</a>
+              <a class="nav-link" href="https://themeforest.net/item/thedocs-online-documentation-template/13070884?license=regular&amp;open_purchase_for_item_id=13070884&amp;purchasable=source&amp;ref=thethemeio">Purchase</a>
+            </div>
+          </div>
+
+          <div class="col-md-3 text-center text-md-right">
+            <a href="http://thetheme.io/">© TheThemeio</a>
+          </div>
+        </div>
+      </div>
+    </footer><!-- /.footer -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/page.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+  </body>
+
+<!-- Mirrored from thetheme.io/thedocs/help/faq-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Jan 2025 22:42:16 GMT -->
+</html>
