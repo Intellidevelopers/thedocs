@@ -6,10 +6,8 @@
 
 You can easily install **TheDocs API** via Composer.
 
-```bash
-composer require abefe/thedocs-api
 
-Replace abefe/thedocs-api with the actual package name if different.
+composer require abefe/thedocs-cli
 
 Usage
 1. Fetch Random Users
@@ -55,7 +53,6 @@ echo $response;
 Example
 Here’s how you can combine all the features in a simple script:
 
-
 <?php
 
 require 'vendor/autoload.php';
@@ -85,7 +82,10 @@ print_r($posts);
 
 echo "\nImages: \n";
 print_r($images);
+
+
 Methods
+
 RandomUsers: Fetches random user data from https://thedocs.loma.com.ng/api.php/random-users.
 RandomPosts: Fetches random post data from https://thedocs.loma.com.ng/api.php/random-posts.
 RandomImages: Fetches random image data from https://thedocs.loma.com.ng/api.php/random-images.
@@ -95,6 +95,7 @@ Requirements
 PHP >= 7.4
 cURL (for making HTTP requests)
 Composer for installation
+
 License
 TheDocs API is licensed under the MIT License. See LICENSE for more details.
 
@@ -108,8 +109,7 @@ Push to the branch (git push origin feature-name).
 Create a new pull request.
 
 
-Author
+# **Author**
 Adeagbo Josiah
 [GitHub Profile](https://github.com/intellidevelopers)
-
-
+*Role*: Software Developer
