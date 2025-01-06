@@ -1,18 +1,17 @@
 {
     "name": "thedocs-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A CLI tool to interact with TheDocs API",
     "main": "lib/TheDocsAPI.js",
     "bin": {
-      "thedocs-cli": "./thedocs-cli.js"
+        "thedocs-cli": "./thedocs-cli.js"
     },
     "dependencies": {
-      "axios": "^0.21.1"
+        "axios": "^0.21.1"
     },
     "scripts": {
-      "start": "node thedocs-cli.js"
+        "start": "node thedocs-cli.js"
     },
     "author": "",
     "license": "ISC"
-  }
-  
+}
